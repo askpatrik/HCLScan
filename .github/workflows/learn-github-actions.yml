@@ -4,7 +4,7 @@ on:
     types: [opened,synchronize]
  push:
     branches:
-      - main # Specify the branch(es) you want to trigger on push
+      - master
 jobs:
  scan:
     runs-on: ubuntu-latest
@@ -17,4 +17,3 @@ jobs:
         uses: HCL-TECH-SOFTWARE/appscan-codesweep-action@v2
     env: 
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
